@@ -1,0 +1,54 @@
+[
+  {
+    "label": "140/90 mmHg: PAM 106,7 · PP 50 · HA estágio 1",
+    "input": {
+      "pas": 140,
+      "pad": 90
+    },
+    "expected": {
+      "raw": {
+        "pam": 106.67,
+        "pp": 50
+      },
+      "tol": 0.01,
+      "verdict": "estágio 1"
+    },
+    "originalInput": {
+      "pas": 140,
+      "pad": 90
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "185/95 mmHg: HA estágio 3",
+    "input": {
+      "pas": 185,
+      "pad": 95
+    },
+    "expected": {
+      "verdict": "estágio 3",
+      "level": "high"
+    },
+    "originalInput": {
+      "pas": 185,
+      "pad": 95
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "115/75 mmHg: PA ótima",
+    "input": {
+      "pas": 115,
+      "pad": 75
+    },
+    "expected": {
+      "verdict": "ótima",
+      "level": "low"
+    },
+    "originalInput": {
+      "pas": 115,
+      "pad": 75
+    },
+    "expandedZeroOptions": []
+  }
+]

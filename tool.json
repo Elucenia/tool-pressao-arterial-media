@@ -1,0 +1,201 @@
+{
+  "tool": {
+    "id": "pressao-arterial-media",
+    "title": "Pressão arterial média e de pulso",
+    "short": "PAM, pressão de pulso e estágio da HA",
+    "spec": [
+      "cardiologia",
+      "medicina-intensiva",
+      "clinica-medica"
+    ],
+    "desc": "Calcule a pressão arterial média e a pressão de pulso e classifique a pressão arterial pela Diretriz Brasileira de Hipertensão Arterial 2020.",
+    "lead": "Calcula a pressão arterial média (PAM), a pressão de pulso e classifica a medida pela Diretriz Brasileira de Hipertensão Arterial 2020.",
+    "fields": [
+      [
+        "pas",
+        "Pressão sistólica",
+        "num",
+        {
+          "min": 50,
+          "max": 300,
+          "unit": "mmHg",
+          "ph": "140"
+        }
+      ],
+      [
+        "pad",
+        "Pressão diastólica",
+        "num",
+        {
+          "min": 20,
+          "max": 200,
+          "unit": "mmHg",
+          "ph": "90"
+        }
+      ]
+    ],
+    "formula": "<ul><li><strong>PAM</strong> = PAD + (PAS − PAD) ÷ 3</li><li><strong>Pressão de pulso</strong> = PAS − PAD</li></ul>",
+    "table": [
+      [
+        "Classificação (DBHA 2020)",
+        "PAS (mmHg)",
+        "PAD (mmHg)"
+      ],
+      [
+        "PA ótima",
+        "&lt; 120",
+        "&lt; 80"
+      ],
+      [
+        "PA normal",
+        "120 a 129",
+        "80 a 84"
+      ],
+      [
+        "Pré-hipertensão",
+        "130 a 139",
+        "85 a 89"
+      ],
+      [
+        "HA estágio 1",
+        "140 a 159",
+        "90 a 99"
+      ],
+      [
+        "HA estágio 2",
+        "160 a 179",
+        "100 a 109"
+      ],
+      [
+        "HA estágio 3",
+        "≥ 180",
+        "≥ 110"
+      ]
+    ],
+    "table_note": "Quando PAS e PAD caem em categorias diferentes, vale a maior.",
+    "tips": [
+      "PAM ≥ 65 mmHg é a meta usual de perfusão em choque; a PAM também é o valor medido diretamente pelos aparelhos oscilométricos.",
+      "Pressão de pulso &gt; 60 mmHg em idosos sugere rigidez arterial e é lesão de órgão-alvo na diretriz brasileira.",
+      "Confirme o diagnóstico de hipertensão fora do consultório (MAPA ou MRPA) para afastar o efeito do avental branco e a hipertensão mascarada."
+    ],
+    "sources": [
+      [
+        "Barroso WKS et al. Diretrizes Brasileiras de Hipertensão Arterial – 2020. Arq Bras Cardiol, 2021.",
+        "https://doi.org/10.36660/abc.20201238"
+      ]
+    ],
+    "cases": [
+      [
+        "140/90 mmHg: PAM 106,7 · PP 50 · HA estágio 1",
+        {
+          "pas": 140,
+          "pad": 90
+        },
+        {
+          "raw": {
+            "pam": 106.67,
+            "pp": 50
+          },
+          "tol": 0.01,
+          "verdict": "estágio 1"
+        }
+      ],
+      [
+        "185/95 mmHg: HA estágio 3",
+        {
+          "pas": 185,
+          "pad": 95
+        },
+        {
+          "verdict": "estágio 3",
+          "level": "high"
+        }
+      ],
+      [
+        "115/75 mmHg: PA ótima",
+        {
+          "pas": 115,
+          "pad": 75
+        },
+        {
+          "verdict": "ótima",
+          "level": "low"
+        }
+      ]
+    ],
+    "batch": "cardiologia",
+    "kind": "Calculadora",
+    "config": null,
+    "areaId": "cardiotoracica",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/cardiologia.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 3,
+      "passed": 3,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 2,
+      "passed": 2,
+      "cases": [
+        {
+          "label": "Ponderação: 60+(120−60)/3=80",
+          "input": {
+            "pas": 120,
+            "pad": 60
+          },
+          "expected": {
+            "pam": 80,
+            "pp": 60
+          },
+          "status": "passed",
+          "failures": []
+        },
+        {
+          "label": "Domínio: PAD não pode exceder PAS",
+          "input": {
+            "pas": 100,
+            "pad": 110
+          },
+          "expected": {
+            "error": true
+          },
+          "status": "passed",
+          "failures": []
+        }
+      ]
+    }
+  },
+  "review": {
+    "id": "pressao-arterial-media",
+    "status": "needs-review",
+    "reason": "A média aproximada é cálculo físico; a classificação automática usa DBHA 2020. A diretriz brasileira 2025 atualizou a classificação, distinta de outras jurisdições. Preservar somente PAM numérica e revisar interpretação separadamente.",
+    "sourceUrl": "https://abccardiol.org/wp-content/uploads/2025/09/2025-0624_Diretriz_Hipertensao_2025_port.x66747.pdf",
+    "sourceTitle": "Diretriz Brasileira de Hipertensão Arterial — 2025",
+    "sourceDate": "2025-09",
+    "publisherRegion": "Brasil / SBC",
+    "checkedAt": "2026-09-25",
+    "clinicalValidation": "not-performed",
+    "suppressLegacyFormula": true,
+    "formulaOverride": "PAM aproximada (mmHg) = PAD + (PAS − PAD)/3. Esta estimativa não classifica hipertensão; diagnóstico e metas dependem de técnica, repetições e diretriz escolhida.",
+    "replacementReadings": [
+      {
+        "url": "https://abccardiol.org/wp-content/uploads/2025/09/2025-0624_Diretriz_Hipertensao_2025_port.x66747.pdf",
+        "title": "Diretriz Brasileira de Hipertensão Arterial — 2025",
+        "date": "2025-09",
+        "region": "Brasil / SBC"
+      }
+    ]
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/cardiologia.php",
+    "sha256": "ed536451dd02922a7f840f2c9ce575be004cddb227f60426b7a52cf1b0e94ec0",
+    "bytes": 61303
+  },
+  "clinicalValidation": "not-performed"
+}
