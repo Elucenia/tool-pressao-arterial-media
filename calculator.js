@@ -1,11 +1,11 @@
-/* tool-pressao-arterial-media · Elucenia · https://github.com/Elucenia/tool-pressao-arterial-media
-   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+/* tool-pressao-arterial-media · ELUCENIA · https://github.com/Elucenia/tool-pressao-arterial-media
+   Copyright (c) 2026 ELUCENIA · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
    Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"pressao-arterial-media","title":"Pressão arterial média e de pulso","fields":[["pas","Pressão sistólica","num",{"min":50,"max":300,"unit":"mmHg","ph":"140"}],["pad","Pressão diastólica","num",{"min":20,"max":200,"unit":"mmHg","ph":"90"}]],"config":null,"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};
