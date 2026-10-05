@@ -1,0 +1,686 @@
+{
+  "schema": "elucenia-native-tool-actual-r6-local-HTTP-subset-r5",
+  "id": "pressao-arterial-media",
+  "sourceReceipt": {
+    "file": "reports/review-20261005-completion/deploy-lock/r6-all-calculators-http-results.json",
+    "bytes": 7105396,
+    "sha256": "c0b1e4dc320ce807e78c0444e629c1269b545b6e2ac87c265d896073d8c34ecb"
+  },
+  "servedBuildId": "jN-2wbRrarMjYPwdPnRHh",
+  "checker": {
+    "file": "reports/review-20261005-completion/deploy-lock/verify-r6-all-calculators-http.cjs",
+    "sha256": "92411a9e01fe36e1bf380c3336f2171bdb523a02ff09683da75927b12b33b3fa",
+    "bytes": 20735
+  },
+  "health": {
+    "url": "http://127.0.0.1:3067/api/health",
+    "startedAt": "2026-10-05T17:35:43.039Z",
+    "status": 200,
+    "headers": {
+      "contentType": "application/json",
+      "retryAfter": null,
+      "cacheControl": "no-store",
+      "nosniff": "nosniff"
+    },
+    "body": {
+      "status": "ok",
+      "application": "ELUCENIA",
+      "framework": "Next.js",
+      "version": "1.0.0"
+    },
+    "responseSha256": "65f95645e7826371eb2d9d3f96e0fed52ea4b88c77203f0cf2511769e57cd108",
+    "bytes": 80,
+    "elapsedMs": 27.345699999999994
+  },
+  "identity": {
+    "url": "http://127.0.0.1:3067/_next/data/jN-2wbRrarMjYPwdPnRHh/en/tools.json",
+    "startedAt": "2026-10-05T17:35:43.068Z",
+    "status": 200,
+    "headers": {
+      "contentType": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "cacheControl": "s-maxage=31536000",
+      "nosniff": "nosniff"
+    },
+    "responseSha256": "404601e2c283a588a2f41af4feb5113d1993f76cc22f73a7b8ef4f5d17a82fa8",
+    "bytes": 103853,
+    "elapsedMs": 14.542600000000007,
+    "semanticMatchWithCompiledCatalog": true
+  },
+  "sourceCalculator": {
+    "file": "deliveries/elucenia-next-hostinger-r6/private/tool-code/pressao-arterial-media/calculator.js",
+    "sha256": "e92993e5e0fc8d631444392836a56c2bd6907b8e7077da60c8c23c84c59cc5a7",
+    "bytes": 5260
+  },
+  "sourceCalculatorMatchesCurrentCandidate": true,
+  "toolStatus": {
+    "cases": 3,
+    "replayed": 3,
+    "passed": 3,
+    "failed": 0,
+    "status": "passed"
+  },
+  "cases": [
+    {
+      "id": "pressao-arterial-media",
+      "kind": "native-source-reference",
+      "index": 0,
+      "name": "140/90 mmHg: PAM 106,7 · PP 50 · HA estágio 1",
+      "originalInput": {
+        "pas": 140,
+        "pad": 90
+      },
+      "input": {
+        "pas": 140,
+        "pad": 90
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "pam": 106.67,
+          "pp": 50
+        },
+        "tol": 0.01,
+        "verdict": "estágio 1"
+      },
+      "recordedResult": {
+        "main": [
+          "107",
+          "mmHg"
+        ],
+        "label": "Pressão arterial média",
+        "raw": {
+          "pam": 106.66666666666667,
+          "pp": 50,
+          "stage": 3
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/pressao-arterial-media/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "pas": 140,
+            "pad": 90
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/pressao-arterial-media/calculate",
+          "startedAt": "2026-10-05T17:39:27.175Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "pressao-arterial-media",
+              "main": [
+                "107",
+                "mmHg"
+              ],
+              "label": "Pressão arterial média",
+              "raw": {
+                "pam": 106.66666666666667,
+                "pp": 50,
+                "stage": 3
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "42a59710ed8d2e0bb576c755e863a5364627abc109dc405c7ce159beb1cfd4cc",
+          "bytes": 187,
+          "elapsedMs": 4.07819999998901
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/pressao-arterial-media/calculate",
+        "startedAt": "2026-10-05T17:39:27.175Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "pressao-arterial-media",
+            "main": [
+              "107",
+              "mmHg"
+            ],
+            "label": "Pressão arterial média",
+            "raw": {
+              "pam": 106.66666666666667,
+              "pp": 50,
+              "stage": 3
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "42a59710ed8d2e0bb576c755e863a5364627abc109dc405c7ce159beb1cfd4cc",
+        "bytes": 187,
+        "elapsedMs": 4.07819999998901
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.pam",
+            "expected": 106.67,
+            "obtained": 106.66666666666667,
+            "tolerance": 0.01,
+            "difference": 0.0033333333333303017,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.pp",
+            "expected": 50,
+            "obtained": 50,
+            "tolerance": 0.01,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.pam",
+            "expected": 106.66666666666667,
+            "obtained": 106.66666666666667,
+            "tolerance": 1.0666666666666667e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.pp",
+            "expected": 50,
+            "obtained": 50,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.stage",
+            "expected": 3,
+            "obtained": 3,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "107",
+            "obtained": "107",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "mmHg",
+            "obtained": "mmHg",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "verdict",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "pressao-arterial-media",
+      "kind": "native-source-reference",
+      "index": 1,
+      "name": "185/95 mmHg: HA estágio 3",
+      "originalInput": {
+        "pas": 185,
+        "pad": 95
+      },
+      "input": {
+        "pas": 185,
+        "pad": 95
+      },
+      "amendments": [],
+      "expected": {
+        "verdict": "estágio 3",
+        "level": "high"
+      },
+      "recordedResult": {
+        "main": [
+          "125",
+          "mmHg"
+        ],
+        "label": "Pressão arterial média",
+        "raw": {
+          "pam": 125,
+          "pp": 90,
+          "stage": 5
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/pressao-arterial-media/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "pas": 185,
+            "pad": 95
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/pressao-arterial-media/calculate",
+          "startedAt": "2026-10-05T17:39:27.488Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "pressao-arterial-media",
+              "main": [
+                "125",
+                "mmHg"
+              ],
+              "label": "Pressão arterial média",
+              "raw": {
+                "pam": 125,
+                "pp": 90,
+                "stage": 5
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "1836982e8f3dae3fa3714f516ea151e920f6ad1d4239fe652575126cdb6a6cc7",
+          "bytes": 172,
+          "elapsedMs": 4.309000000008382
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/pressao-arterial-media/calculate",
+        "startedAt": "2026-10-05T17:39:27.488Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "pressao-arterial-media",
+            "main": [
+              "125",
+              "mmHg"
+            ],
+            "label": "Pressão arterial média",
+            "raw": {
+              "pam": 125,
+              "pp": 90,
+              "stage": 5
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "1836982e8f3dae3fa3714f516ea151e920f6ad1d4239fe652575126cdb6a6cc7",
+        "bytes": 172,
+        "elapsedMs": 4.309000000008382
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.pam",
+            "expected": 125,
+            "obtained": 125,
+            "tolerance": 1.25e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.pp",
+            "expected": 90,
+            "obtained": 90,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.stage",
+            "expected": 5,
+            "obtained": 5,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "125",
+            "obtained": "125",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "mmHg",
+            "obtained": "mmHg",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "verdict",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          },
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "pressao-arterial-media",
+      "kind": "native-source-reference",
+      "index": 2,
+      "name": "115/75 mmHg: PA ótima",
+      "originalInput": {
+        "pas": 115,
+        "pad": 75
+      },
+      "input": {
+        "pas": 115,
+        "pad": 75
+      },
+      "amendments": [],
+      "expected": {
+        "verdict": "ótima",
+        "level": "low"
+      },
+      "recordedResult": {
+        "main": [
+          "88",
+          "mmHg"
+        ],
+        "label": "Pressão arterial média",
+        "raw": {
+          "pam": 88.33333333333333,
+          "pp": 40,
+          "stage": 0
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/pressao-arterial-media/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "pas": 115,
+            "pad": 75
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/pressao-arterial-media/calculate",
+          "startedAt": "2026-10-05T17:39:27.803Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "pressao-arterial-media",
+              "main": [
+                "88",
+                "mmHg"
+              ],
+              "label": "Pressão arterial média",
+              "raw": {
+                "pam": 88.33333333333333,
+                "pp": 40,
+                "stage": 0
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "22a2019abb1760772caa4cf90e7c2fe9088e481366744a331d5d4857a45bf434",
+          "bytes": 185,
+          "elapsedMs": 4.640299999999115
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/pressao-arterial-media/calculate",
+        "startedAt": "2026-10-05T17:39:27.803Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "pressao-arterial-media",
+            "main": [
+              "88",
+              "mmHg"
+            ],
+            "label": "Pressão arterial média",
+            "raw": {
+              "pam": 88.33333333333333,
+              "pp": 40,
+              "stage": 0
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "22a2019abb1760772caa4cf90e7c2fe9088e481366744a331d5d4857a45bf434",
+        "bytes": 185,
+        "elapsedMs": 4.640299999999115
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.pam",
+            "expected": 88.33333333333333,
+            "obtained": 88.33333333333333,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.pp",
+            "expected": 40,
+            "obtained": 40,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.stage",
+            "expected": 0,
+            "obtained": 0,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "88",
+            "obtained": "88",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "mmHg",
+            "obtained": "mmHg",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "verdict",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          },
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    }
+  ],
+  "scope": {
+    "syntheticDataOnly": true,
+    "applicationModuleImports": 0,
+    "browserInteractions": 0,
+    "newIndependentOracles": 0,
+    "nativeSourceReferenceCases": 882,
+    "additionalDecimalCases": 4,
+    "predictProstateHasSeparateFullCurveOracleReplay": true,
+    "clinicalApproval": false,
+    "professionalLanguageApproval": false,
+    "populationValidation": false,
+    "hostingerDeploymentVerified": false,
+    "actualHTTPExecution": true,
+    "standaloneNodeServer": true,
+    "nodeVersion": "v22.18.0",
+    "noNewClinicalOrProfessionalApproval": true,
+    "pubmedResourceIsNotCalculatorAndNotIncludedIn222": true,
+    "description": "All 882 existing reference cases across the 218 native calculators plus four existing Decimal50 examples, executed via HTTP against the final local r6 standalone build. Raw precise source-audit comparisons are transport regressions, not independent clinical or full-method validation."
+  },
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false,
+  "newIndependentOracle": false,
+  "actualBrowserJourney": false,
+  "hostingerDeploymentVerified": false
+}
