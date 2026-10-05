@@ -1,0 +1,318 @@
+{
+  "id": "pressao-arterial-media",
+  "at": "2026-10-05T17:30:02.325Z",
+  "adapter": {
+    "file": "apps/website/private/tool-code/pressao-arterial-media/calculator.js",
+    "bytes": 5260,
+    "sha256": "e92993e5e0fc8d631444392836a56c2bd6907b8e7077da60c8c23c84c59cc5a7"
+  },
+  "cases": [
+    {
+      "name": "140/90 mmHg: PAM 106,7 · PP 50 · HA estágio 1",
+      "input": {
+        "pas": 140,
+        "pad": 90
+      },
+      "obtained": {
+        "id": "pressao-arterial-media",
+        "main": [
+          "107",
+          "mmHg"
+        ],
+        "label": "Pressão arterial média",
+        "raw": {
+          "pam": 106.66666666666667,
+          "pp": 50,
+          "stage": 3
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.pam",
+          "expected": 106.67,
+          "obtained": 106.66666666666667,
+          "tolerance": 0.01,
+          "difference": 0.0033333333333303017,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.pp",
+          "expected": 50,
+          "obtained": 50,
+          "tolerance": 0.01,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.pam",
+          "expected": 106.66666666666667,
+          "obtained": 106.66666666666667,
+          "tolerance": 1.0666666666666667e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.pp",
+          "expected": 50,
+          "obtained": 50,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.stage",
+          "expected": 3,
+          "obtained": 3,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "107",
+          "obtained": "107",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "mmHg",
+          "obtained": "mmHg",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "verdict",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "185/95 mmHg: HA estágio 3",
+      "input": {
+        "pas": 185,
+        "pad": 95
+      },
+      "obtained": {
+        "id": "pressao-arterial-media",
+        "main": [
+          "125",
+          "mmHg"
+        ],
+        "label": "Pressão arterial média",
+        "raw": {
+          "pam": 125,
+          "pp": 90,
+          "stage": 5
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.pam",
+          "expected": 125,
+          "obtained": 125,
+          "tolerance": 1.25e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.pp",
+          "expected": 90,
+          "obtained": 90,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.stage",
+          "expected": 5,
+          "obtained": 5,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "125",
+          "obtained": "125",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "mmHg",
+          "obtained": "mmHg",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "verdict",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        },
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "115/75 mmHg: PA ótima",
+      "input": {
+        "pas": 115,
+        "pad": 75
+      },
+      "obtained": {
+        "id": "pressao-arterial-media",
+        "main": [
+          "88",
+          "mmHg"
+        ],
+        "label": "Pressão arterial média",
+        "raw": {
+          "pam": 88.33333333333333,
+          "pp": 40,
+          "stage": 0
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.pam",
+          "expected": 88.33333333333333,
+          "obtained": 88.33333333333333,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.pp",
+          "expected": 40,
+          "obtained": 40,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.stage",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "88",
+          "obtained": "88",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "mmHg",
+          "obtained": "mmHg",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "verdict",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        },
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    }
+  ],
+  "refusals": {
+    "passed": 24,
+    "failed": 0,
+    "failures": []
+  },
+  "sourceNodeBrowserVmParity": true,
+  "actualBrowserDomVerified": false,
+  "newIndependentOracle": false,
+  "currentActualR6HttpEvidence": "pending",
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false
+}

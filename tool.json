@@ -3,13 +3,14 @@
     "id": "pressao-arterial-media",
     "title": "Pressão arterial média e de pulso",
     "short": "PAM, pressão de pulso e estágio da HA",
+    "desc": "Calcule a pressão arterial média e a pressão de pulso e classifique a pressão arterial pela Diretriz Brasileira de Hipertensão Arterial 2020.",
+    "lead": "Calcula a pressão arterial média (PAM), a pressão de pulso e classifica a medida pela Diretriz Brasileira de Hipertensão Arterial 2020.",
+    "kind": "Calculadora",
     "spec": [
       "cardiologia",
       "medicina-intensiva",
       "clinica-medica"
     ],
-    "desc": "Calcule a pressão arterial média e a pressão de pulso e classifique a pressão arterial pela Diretriz Brasileira de Hipertensão Arterial 2020.",
-    "lead": "Calcula a pressão arterial média (PAM), a pressão de pulso e classifica a medida pela Diretriz Brasileira de Hipertensão Arterial 2020.",
     "fields": [
       [
         "pas",
@@ -35,53 +36,14 @@
       ]
     ],
     "formula": "<ul><li><strong>PAM</strong> = PAD + (PAS − PAD) ÷ 3</li><li><strong>Pressão de pulso</strong> = PAS − PAD</li></ul>",
-    "table": [
-      [
-        "Classificação (DBHA 2020)",
-        "PAS (mmHg)",
-        "PAD (mmHg)"
-      ],
-      [
-        "PA ótima",
-        "&lt; 120",
-        "&lt; 80"
-      ],
-      [
-        "PA normal",
-        "120 a 129",
-        "80 a 84"
-      ],
-      [
-        "Pré-hipertensão",
-        "130 a 139",
-        "85 a 89"
-      ],
-      [
-        "HA estágio 1",
-        "140 a 159",
-        "90 a 99"
-      ],
-      [
-        "HA estágio 2",
-        "160 a 179",
-        "100 a 109"
-      ],
-      [
-        "HA estágio 3",
-        "≥ 180",
-        "≥ 110"
-      ]
-    ],
-    "table_note": "Quando PAS e PAD caem em categorias diferentes, vale a maior.",
-    "tips": [
-      "PAM ≥ 65 mmHg é a meta usual de perfusão em choque; a PAM também é o valor medido diretamente pelos aparelhos oscilométricos.",
-      "Pressão de pulso &gt; 60 mmHg em idosos sugere rigidez arterial e é lesão de órgão-alvo na diretriz brasileira.",
-      "Confirme o diagnóstico de hipertensão fora do consultório (MAPA ou MRPA) para afastar o efeito do avental branco e a hipertensão mascarada."
-    ],
     "sources": [
       [
         "Barroso WKS et al. Diretrizes Brasileiras de Hipertensão Arterial – 2020. Arq Bras Cardiol, 2021.",
         "https://doi.org/10.36660/abc.20201238"
+      ],
+      [
+        "AHA scientific statement2019,Measurement of Blood Pressure in Humans",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11409525/"
       ]
     ],
     "cases": [
@@ -123,9 +85,6 @@
         }
       ]
     ],
-    "kind": "Calculadora",
-    "config": null,
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -138,55 +97,125 @@
       "testedAt": "2026-09-25",
       "total": 2,
       "passed": 2,
-      "cases": [
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "PAM=(PAS+2 PAD)/3 epressãopulso PAS−PAD; aproximação adulta ritmo convencional; DBHA 2020",
+    "implementationVersion": "pressao-arterial-media@native-2026-10-03+e92993e5e0fc",
+    "currentMethodSource": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9949730/",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "PAM = PAD + (PAS − PAD) ÷ 3 Pressão de pulso = PAS − PAD",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "pas",
+            "label": "Pressão sistólica",
+            "type": "num",
+            "min": 50,
+            "max": 300,
+            "unit": "mmHg",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "pad",
+            "label": "Pressão diastólica",
+            "type": "num",
+            "min": 20,
+            "max": 200,
+            "unit": "mmHg",
+            "optional": false,
+            "options": null
+          }
+        ],
+        "hash": "438d29c8164c024332280af046ca9ab553969d08c139561d8d7f95bd1d9df9ff"
+      },
+      "sourceEditions": [
         {
-          "label": "Ponderação: 60+(120−60)/3=80",
-          "input": {
-            "pas": 120,
-            "pad": 60
+          "citation": "Barroso WKS et al. Diretrizes Brasileiras de Hipertensão Arterial – 2020. Arq Bras Cardiol, 2021.",
+          "url": "https://doi.org/10.36660/abc.20201238",
+          "class": "primary-publication-full-text-retrieved",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": true,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Brazilian Guidelines of Hypertension - 2020.",
+            "year": "2021",
+            "firstPublicationDate": "2021-03-01",
+            "doi": "10.36660/abc.20201238",
+            "pmid": "33909761",
+            "pmcid": "PMC9949730",
+            "journal": "Arquivos brasileiros de cardiologia",
+            "authors": "Barroso WKS, Rodrigues CIS, Bortolotto LA, Mota-Gomes MA, Brandão AA, Feitosa ADM, Machado CA, Poli-de-Figueiredo CE, Amodeo C, Mion Júnior D, Barbosa ECD, Nobre F, Guimarães ICB, Vilela-Martin JF, Yugar-Toledo JC, Magalhães MEC, Neves MFT, Jardim PCBV, Miranda RD, Póvoa RMDS, Fuchs SC, Alessi A, Lucena AJG, Avezum A, Sousa ALL, Pio-Abreu A, Sposito AC, Pierin AMG, Paiva AMG, Spinelli ACS, Nogueira ADR, Dinamarco N, Eibel B, Forjaz CLM, Zanini CRO, Souza CB, Souza DDSM, Nilson EAF, Costa EFA, Freitas EV, Duarte EDR, Muxfeldt ES, Lima Júnior E, Campana EMG, Cesarino EJ, Marques F, Argenta F, Consolim-Colombo FM, Baptista FS, Almeida FA, Borelli FAO, Fuchs FD, Plavnik FL, Salles GF, Feitosa GS, Silva GVD, Guerra GM, Moreno Júnior H, Finimundi HC, Back IC, Oliveira Filho JB, Gemelli JR, Mill JG, Ribeiro JM, Lotaif LAD, Costa LSD, Magalhães LBNC, Drager LF, Martin LC, Scala LCN, Almeida MQ, Gowdak MMG, Klein MRST, Malachias MVB, Kuschnir MCC, Pinheiro ME, Borba MHE, Moreira Filho O, Passarelli Júnior O, Coelho OR, Vitorino PVO, Vitorino PVO, Ribeiro Junior RM, Esporcatte R, Franco R, Pedrosa R, Mulinari RA, Paula RB, Okawa RTP, Rosa RF, Amaral SLD, Ferreira-Filho SR, Kaiser SE, Jardim TSV, Guimarães V, Koch VH, Oigman W, Nadruz W."
           },
-          "expected": {
-            "pam": 80,
-            "pp": 60
-          },
-          "status": "passed",
-          "failures": []
+          "primaryPublicationUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9949730/",
+          "abstractAvailable": false,
+          "fullTextSha256": "ca50449c3a87f1310abb795a2cae4f92a3818be8ba5d53abf79db0efce09e0a2",
+          "abstractSha256": null,
+          "matchedBy": "exact-DOI-or-PMID"
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-09-25",
+        "total": 2,
+        "passed": 2,
+        "publicCandidateBankOmitted": true
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "e92993e5e0fc8d631444392836a56c2bd6907b8e7077da60c8c23c84c59cc5a7"
+    },
+    "limits": "A média aproximada por pressão diastólica mais um terço da pressão de pulso pressupõe frequência cardíaca normal, conforme a declaração AHA 2019; não é a integração direta da curva de pressão. Use sistólica e diastólica em mmHg, obtidas com técnica e aparelho apropriados, e documente as condições da medida. A diferença sistólica menos diastólica é pressão de pulso, não frequência do pulso. O resultado isolado não estabelece diagnóstico de hipertensão nem um alvo universal para pacientes críticos.",
+    "limitsEvidence": {
+      "status": "direct-primary-scientific-statement-named-sections-read",
+      "sources": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11409525/",
+          "edition": "AHA scientific statement2019,Measurement of Blood Pressure in Humans",
+          "readScope": "Direct original BPcomponents/Pulsepressure-MAP section and measurement overview read:MAP approximate1/3SBP+2/3DBP at normal heart rates;validated accurate measurements. Not full statement."
         },
         {
-          "label": "Domínio: PAD não pode exceder PAS",
-          "input": {
-            "pas": 100,
-            "pad": 110
-          },
-          "expected": {
-            "error": true
-          },
-          "status": "passed",
-          "failures": []
+          "url": "https://doi.org/10.36660/abc.20201238",
+          "edition": "Brazilian hypertension guidelines2020",
+          "readScope": "Bibliographic identity and indexed hypertension-definition paragraph only;MAP section not retrieved."
         }
-      ]
+      ],
+      "populationScope": "Approximate cardiac-cycle mean at normal heart rates, distinct from direct waveform measurement.",
+      "remainingChecks": [
+        "No fullAHA statement review.",
+        "Brazilian2020 MAP section not read;source edition identity is not formula certification."
+      ],
+      "clinicalValidation": "not-performed",
+      "professionalLanguageReview": "not-performed",
+      "rightsApproval": "not-performed",
+      "fullMethodConformance": "not-performed"
     }
   },
-  "review": {
-    "id": "pressao-arterial-media",
-    "status": "needs-review",
-    "reason": "A média aproximada é cálculo físico; a classificação automática usa DBHA 2020. A diretriz brasileira 2025 atualizou a classificação, distinta de outras jurisdições. Preservar somente PAM numérica e revisar interpretação separadamente.",
-    "sourceUrl": "https://abccardiol.org/wp-content/uploads/2025/09/2025-0624_Diretriz_Hipertensao_2025_port.x66747.pdf",
-    "sourceTitle": "Diretriz Brasileira de Hipertensão Arterial — 2025",
-    "sourceDate": "2025-09",
-    "publisherRegion": "Brasil / SBC",
-    "checkedAt": "2026-09-25",
-    "clinicalValidation": "not-performed",
-    "suppressLegacyFormula": true,
-    "formulaOverride": "PAM aproximada (mmHg) = PAD + (PAS − PAD)/3. Esta estimativa não classifica hipertensão; diagnóstico e metas dependem de técnica, repetições e diretriz escolhida.",
-    "replacementReadings": [
-      {
-        "url": "https://abccardiol.org/wp-content/uploads/2025/09/2025-0624_Diretriz_Hipertensao_2025_port.x66747.pdf",
-        "title": "Diretriz Brasileira de Hipertensão Arterial — 2025",
-        "date": "2025-09",
-        "region": "Brasil / SBC"
-      }
-    ]
+  "currentSource": {
+    "file": "apps/website/private/tool-code/pressao-arterial-media/calculator.js",
+    "bytes": 5260,
+    "sha256": "e92993e5e0fc8d631444392836a56c2bd6907b8e7077da60c8c23c84c59cc5a7"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "91fc4c2faa0dbf92073ea1b86baf86302b34fc9f535de3c6836001ea059739f4",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 2,
+      "sha256": "4cd2ea9d2436fef34c1fe45fa1dd25a6456a7fa166d7622acd3602bdfc994211",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    },
+    {
+      "rows": 2,
+      "sha256": "4cd2ea9d2436fef34c1fe45fa1dd25a6456a7fa166d7622acd3602bdfc994211",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }

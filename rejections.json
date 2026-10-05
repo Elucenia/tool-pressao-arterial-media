@@ -1,0 +1,276 @@
+[
+  {
+    "name": "Reject null input",
+    "input": null,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject array input",
+    "input": [],
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject string input",
+    "input": "invalid",
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject numeric input",
+    "input": 1,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field pas",
+    "input": {
+      "pad": 90
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "pas"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field pas",
+    "input": {
+      "pas": "",
+      "pad": 90
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "pas"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" pas",
+    "input": {
+      "pas": "NaN",
+      "pad": 90
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pas"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" pas",
+    "input": {
+      "pas": "Infinity",
+      "pad": 90
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pas"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" pas",
+    "input": {
+      "pas": "1e309",
+      "pad": 90
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pas"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" pas",
+    "input": {
+      "pas": "invalid",
+      "pad": 90
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pas"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} pas",
+    "input": {
+      "pas": {},
+      "pad": 90
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pas"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true pas",
+    "input": {
+      "pas": true,
+      "pad": 90
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pas"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum pas",
+    "input": {
+      "pas": 45,
+      "pad": 90
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "pas"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum pas",
+    "input": {
+      "pas": 330,
+      "pad": 90
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "pas"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field pad",
+    "input": {
+      "pas": 140
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "pad"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field pad",
+    "input": {
+      "pas": 140,
+      "pad": ""
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "pad"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" pad",
+    "input": {
+      "pas": 140,
+      "pad": "NaN"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pad"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" pad",
+    "input": {
+      "pas": 140,
+      "pad": "Infinity"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pad"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" pad",
+    "input": {
+      "pas": 140,
+      "pad": "1e309"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pad"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" pad",
+    "input": {
+      "pas": 140,
+      "pad": "invalid"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pad"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} pad",
+    "input": {
+      "pas": 140,
+      "pad": {}
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pad"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true pad",
+    "input": {
+      "pas": 140,
+      "pad": true
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pad"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum pad",
+    "input": {
+      "pas": 140,
+      "pad": 18
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "pad"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum pad",
+    "input": {
+      "pas": 140,
+      "pad": 220
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "pad"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  }
+]

@@ -1,6 +1,13 @@
 [
   {
-    "label": "140/90 mmHg: PAM 106,7 · PP 50 · HA estágio 1",
+    "id": "pressao-arterial-media",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "140/90 mmHg: PAM 106,7 · PP 50 · HA estágio 1",
+    "originalInput": {
+      "pas": 140,
+      "pad": 90
+    },
     "input": {
       "pas": 140,
       "pad": 90
@@ -13,14 +20,36 @@
       "tol": 0.01,
       "verdict": "estágio 1"
     },
-    "originalInput": {
-      "pas": 140,
-      "pad": 90
+    "recordedResult": {
+      "main": [
+        "107",
+        "mmHg"
+      ],
+      "label": "Pressão arterial média",
+      "raw": {
+        "pam": 106.66666666666667,
+        "pp": 50,
+        "stage": 3
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "185/95 mmHg: HA estágio 3",
+    "id": "pressao-arterial-media",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "185/95 mmHg: HA estágio 3",
+    "originalInput": {
+      "pas": 185,
+      "pad": 95
+    },
     "input": {
       "pas": 185,
       "pad": 95
@@ -29,14 +58,36 @@
       "verdict": "estágio 3",
       "level": "high"
     },
-    "originalInput": {
-      "pas": 185,
-      "pad": 95
+    "recordedResult": {
+      "main": [
+        "125",
+        "mmHg"
+      ],
+      "label": "Pressão arterial média",
+      "raw": {
+        "pam": 125,
+        "pp": 90,
+        "stage": 5
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "115/75 mmHg: PA ótima",
+    "id": "pressao-arterial-media",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "115/75 mmHg: PA ótima",
+    "originalInput": {
+      "pas": 115,
+      "pad": 75
+    },
     "input": {
       "pas": 115,
       "pad": 75
@@ -45,10 +96,25 @@
       "verdict": "ótima",
       "level": "low"
     },
-    "originalInput": {
-      "pas": 115,
-      "pad": 75
+    "recordedResult": {
+      "main": [
+        "88",
+        "mmHg"
+      ],
+      "label": "Pressão arterial média",
+      "raw": {
+        "pam": 88.33333333333333,
+        "pp": 40,
+        "stage": 0
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   }
 ]
