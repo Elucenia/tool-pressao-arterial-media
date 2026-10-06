@@ -67,3 +67,36 @@ Resultado da fórmula ou classificação. Interpretação, conduta e aplicabilid
 Apache-2.0 aplica-se somente ao código da ELUCENIA. Os instrumentos, publicações, traduções e dados mantêm os direitos dos respectivos titulares. Preserve LICENSE e NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Resultados documentados
+
+As informações abaixo preservam as saídas do método para exemplos sintéticos. Não constituem validação clínica independente.
+
+### 1
+
+Hipertensão estágio 1 (DBHA 2020)
+
+| Detalhes do resultado | |
+| --- | --- |
+| Pressão de pulso | 50 mmHg |
+
+
+### 2
+
+Hipertensão estágio 3 (DBHA 2020)
+
+| Detalhes do resultado | |
+| --- | --- |
+| Pressão de pulso | 90 mmHg |
+
+Pressão de pulso > 60 mmHg: em idosos, sugere rigidez arterial.
+
+
+### 3
+
+PA ótima (DBHA 2020)
+
+| Detalhes do resultado | |
+| --- | --- |
+| Pressão de pulso | 40 mmHg |
+

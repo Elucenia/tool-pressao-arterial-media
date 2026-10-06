@@ -100,7 +100,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "PAM=(PAS+2 PAD)/3 epressãopulso PAS−PAD; aproximação adulta ritmo convencional; DBHA 2020",
-    "implementationVersion": "pressao-arterial-media@native-2026-10-03+e92993e5e0fc",
+    "implementationVersion": "pressao-arterial-media@native-2026-10-05+ff49b0b77edb",
     "currentMethodSource": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9949730/",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -169,7 +169,35 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "e92993e5e0fc8d631444392836a56c2bd6907b8e7077da60c8c23c84c59cc5a7"
+      "implementationHash": "ff49b0b77edbfd142c8da377386f0d7449da3deb7101ec11ec43e503e88dabf4",
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "pressao-arterial-media@native-2026-10-03+e92993e5e0fc",
+          "previousImplementationHash": "e92993e5e0fc8d631444392836a56c2bd6907b8e7077da60c8c23c84c59cc5a7",
+          "implementationHash": "ff49b0b77edbfd142c8da377386f0d7449da3deb7101ec11ec43e503e88dabf4",
+          "scientificBodySha256": "dce6db6b3a9e4ee49a11eea6fb134b38fdff397ba1ccd00bdcb2f75d69fe43a5",
+          "metadataContractHash": "438d29c8164c024332280af046ca9ab553969d08c139561d8d7f95bd1d9df9ff",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        }
+      ]
     },
     "limits": "A média aproximada por pressão diastólica mais um terço da pressão de pulso pressupõe frequência cardíaca normal, conforme a declaração AHA 2019; não é a integração direta da curva de pressão. Use sistólica e diastólica em mmHg, obtidas com técnica e aparelho apropriados, e documente as condições da medida. A diferença sistólica menos diastólica é pressão de pulso, não frequência do pulso. O resultado isolado não estabelece diagnóstico de hipertensão nem um alvo universal para pacientes críticos.",
     "limitsEvidence": {
@@ -199,20 +227,20 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/pressao-arterial-media/calculator.js",
-    "bytes": 5260,
-    "sha256": "e92993e5e0fc8d631444392836a56c2bd6907b8e7077da60c8c23c84c59cc5a7"
+    "bytes": 5465,
+    "sha256": "ff49b0b77edbfd142c8da377386f0d7449da3deb7101ec11ec43e503e88dabf4"
   },
-  "sourceToolSha256": "91fc4c2faa0dbf92073ea1b86baf86302b34fc9f535de3c6836001ea059739f4",
+  "sourceToolSha256": "f88784e5c7e525d4ec13cb0b28eb6b3bbb289b693ff56c27ec70aa612fb0a549",
   "omittedFullReferenceBanks": [
     {
       "rows": 2,
       "sha256": "4cd2ea9d2436fef34c1fe45fa1dd25a6456a7fa166d7622acd3602bdfc994211",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     },
     {
       "rows": 2,
       "sha256": "4cd2ea9d2436fef34c1fe45fa1dd25a6456a7fa166d7622acd3602bdfc994211",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",

@@ -1,0 +1,202 @@
+{
+  "schema": "elucenia-public-source-result-preservation-v1",
+  "id": "pressao-arterial-media",
+  "source": {
+    "baselineFile": "reports/review-20261005-completion/public-native-output-baseline-r2/baseline.json",
+    "baselineSha256": "e5f274fa5acc74566e1c3d55afb6bb402ad9928337dd77a2945442f5b6c49439",
+    "previousCommit": "32464feb7059ba767cd79d87f3d5129075b94d9e",
+    "oldEngineSha256": "e92993e5e0fc8d631444392836a56c2bd6907b8e7077da60c8c23c84c59cc5a7",
+    "currentEngineSha256": "ff49b0b77edbfd142c8da377386f0d7449da3deb7101ec11ec43e503e88dabf4"
+  },
+  "scope": "Existing synthetic inputs and same pinned mathematical-function outputs. Clinical interpretation correctness and professional translation are separate unperformed reviews.",
+  "clinicalApproval": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "cases": [
+    {
+      "caseIndex": 0,
+      "name": "140/90 mmHg: PAM 106,7 · PP 50 · HA estágio 1",
+      "input": {
+        "pas": 140,
+        "pad": 90
+      },
+      "publicOutput": {
+        "id": "pressao-arterial-media",
+        "main": [
+          "107",
+          "mmHg"
+        ],
+        "label": "Pressão arterial média",
+        "raw": {
+          "pam": 106.66666666666667,
+          "pp": 50,
+          "stage": 3
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "pam": 106.67,
+          "pp": 50
+        },
+        "tol": 0.01,
+        "verdict": "estágio 1"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "107",
+          "mmHg"
+        ],
+        "label": "Pressão arterial média",
+        "level": "mid",
+        "verdict": "Hipertensão estágio 1 (DBHA 2020)",
+        "rows": [
+          [
+            "Pressão de pulso",
+            "50 mmHg"
+          ]
+        ],
+        "note": "",
+        "raw": {
+          "pam": 106.66666666666667,
+          "pp": 50,
+          "stage": 3
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "rows"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "rows"
+      ]
+    },
+    {
+      "caseIndex": 1,
+      "name": "185/95 mmHg: HA estágio 3",
+      "input": {
+        "pas": 185,
+        "pad": 95
+      },
+      "publicOutput": {
+        "id": "pressao-arterial-media",
+        "main": [
+          "125",
+          "mmHg"
+        ],
+        "label": "Pressão arterial média",
+        "raw": {
+          "pam": 125,
+          "pp": 90,
+          "stage": 5
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "verdict": "estágio 3",
+        "level": "high"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "125",
+          "mmHg"
+        ],
+        "label": "Pressão arterial média",
+        "level": "high",
+        "verdict": "Hipertensão estágio 3 (DBHA 2020)",
+        "rows": [
+          [
+            "Pressão de pulso",
+            "90 mmHg"
+          ]
+        ],
+        "note": "Pressão de pulso > 60 mmHg: em idosos, sugere rigidez arterial.",
+        "raw": {
+          "pam": 125,
+          "pp": 90,
+          "stage": 5
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "rows",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "rows",
+        "note"
+      ]
+    },
+    {
+      "caseIndex": 2,
+      "name": "115/75 mmHg: PA ótima",
+      "input": {
+        "pas": 115,
+        "pad": 75
+      },
+      "publicOutput": {
+        "id": "pressao-arterial-media",
+        "main": [
+          "88",
+          "mmHg"
+        ],
+        "label": "Pressão arterial média",
+        "raw": {
+          "pam": 88.33333333333333,
+          "pp": 40,
+          "stage": 0
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "verdict": "ótima",
+        "level": "low"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "88",
+          "mmHg"
+        ],
+        "label": "Pressão arterial média",
+        "level": "low",
+        "verdict": "PA ótima (DBHA 2020)",
+        "rows": [
+          [
+            "Pressão de pulso",
+            "40 mmHg"
+          ]
+        ],
+        "note": "",
+        "raw": {
+          "pam": 88.33333333333333,
+          "pp": 40,
+          "stage": 0
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "rows"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "rows"
+      ]
+    }
+  ]
+}

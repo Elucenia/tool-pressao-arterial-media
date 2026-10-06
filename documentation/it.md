@@ -67,3 +67,36 @@ Risultato della formula o classificazione. Interpretazione, condotta e applicabi
 Apache-2.0 si applica solo al codice di ELUCENIA. I diritti su strumenti, pubblicazioni, traduzioni e dati restano ai rispettivi titolari. Conservi LICENSE e NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Risultati documentati
+
+Le informazioni seguenti conservano gli output del metodo per esempi sintetici. Non costituiscono una validazione clinica indipendente.
+
+### 1
+
+Ipertensione stadio 1 (DBHA 2020)
+
+| Dettagli del risultato | |
+| --- | --- |
+| Pressione differenziale | 50 mmHg |
+
+
+### 2
+
+Ipertensione stadio 3 (DBHA 2020)
+
+| Dettagli del risultato | |
+| --- | --- |
+| Pressione differenziale | 90 mmHg |
+
+Pressione del polso > 60 mmHg: negli anziani suggerisce rigidità arteriosa.
+
+
+### 3
+
+PA ottimale (DBHA 2020)
+
+| Dettagli del risultato | |
+| --- | --- |
+| Pressione differenziale | 40 mmHg |
+

@@ -67,3 +67,36 @@ Resultado de la fórmula o clasificación. La interpretación, la conducta y la 
 Apache-2.0 se aplica únicamente al código de ELUCENIA. Los derechos de los instrumentos, publicaciones, traducciones y datos permanecen en manos de sus respectivos titulares. Conserve LICENSE y NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Resultados documentados
+
+La información siguiente conserva las salidas del método para ejemplos sintéticos. No constituye una validación clínica independiente.
+
+### 1
+
+Hipertensión estadio 1 (DBHA 2020)
+
+| Detalles del resultado | |
+| --- | --- |
+| Presión de pulso | 50 mmHg |
+
+
+### 2
+
+Hipertensión estadio 3 (DBHA 2020)
+
+| Detalles del resultado | |
+| --- | --- |
+| Presión de pulso | 90 mmHg |
+
+Presión de pulso > 60 mmHg: en los adultos mayores, sugiere rigidez arterial.
+
+
+### 3
+
+PA óptima (DBHA 2020)
+
+| Detalles del resultado | |
+| --- | --- |
+| Presión de pulso | 40 mmHg |
+

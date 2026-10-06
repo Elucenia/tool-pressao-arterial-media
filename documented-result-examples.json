@@ -1,0 +1,938 @@
+{
+  "id": "pressao-arterial-media",
+  "implementationVersion": "pressao-arterial-media@native-2026-10-05+ff49b0b77edb",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "140/90 mmHg: PAM 106,7 · PP 50 · HA estágio 1",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Pressão de pulso",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "50 mmHg",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Hipertensão estágio 1 (DBHA 2020)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "185/95 mmHg: HA estágio 3",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Pressão de pulso",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "90 mmHg",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Hipertensão estágio 3 (DBHA 2020)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Pressão de pulso > 60 mmHg: em idosos, sugere rigidez arterial.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "115/75 mmHg: PA ótima",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Pressão de pulso",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "40 mmHg",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "PA ótima (DBHA 2020)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "140/90 mmHg: PAM 106,7 · PP 50 · HA estágio 1",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Pulse pressure",
+                "locale": "en",
+                "template": "documented-authored-a6a72b861fdf94f805e2"
+              },
+              "value": {
+                "text": "50 mmHg",
+                "locale": "en",
+                "template": "documented-authored-fb4e1f7b4d0ef3efa257",
+                "sourceNumbers": [
+                  50
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Stage 1 hypertension (DBHA 2020)",
+            "locale": "en",
+            "template": "documented-authored-da2a7dc4990ec55e63dc"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "185/95 mmHg: HA estágio 3",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Pulse pressure",
+                "locale": "en",
+                "template": "documented-authored-a6a72b861fdf94f805e2"
+              },
+              "value": {
+                "text": "90 mmHg",
+                "locale": "en",
+                "template": "documented-authored-fb4e1f7b4d0ef3efa257",
+                "sourceNumbers": [
+                  90
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Stage 3 hypertension (DBHA 2020)",
+            "locale": "en",
+            "template": "documented-authored-f57f420b7b158021a746"
+          },
+          "note": {
+            "text": "Pulse pressure > 60 mmHg: in older adults, suggests arterial stiffness.",
+            "locale": "en",
+            "template": "documented-authored-71fc0f3ab2e37ef8414c"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "115/75 mmHg: PA ótima",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Pulse pressure",
+                "locale": "en",
+                "template": "documented-authored-a6a72b861fdf94f805e2"
+              },
+              "value": {
+                "text": "40 mmHg",
+                "locale": "en",
+                "template": "documented-authored-fb4e1f7b4d0ef3efa257",
+                "sourceNumbers": [
+                  40
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Optimal BP (DBHA 2020)",
+            "locale": "en",
+            "template": "documented-authored-bb21819bc80183a08aa6"
+          },
+          "level": "low"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "140/90 mmHg: PAM 106,7 · PP 50 · HA estágio 1",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Presión de pulso",
+                "locale": "es",
+                "template": "documented-authored-a6a72b861fdf94f805e2"
+              },
+              "value": {
+                "text": "50 mmHg",
+                "locale": "es",
+                "template": "documented-authored-fb4e1f7b4d0ef3efa257",
+                "sourceNumbers": [
+                  50
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Hipertensión estadio 1 (DBHA 2020)",
+            "locale": "es",
+            "template": "documented-authored-da2a7dc4990ec55e63dc"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "185/95 mmHg: HA estágio 3",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Presión de pulso",
+                "locale": "es",
+                "template": "documented-authored-a6a72b861fdf94f805e2"
+              },
+              "value": {
+                "text": "90 mmHg",
+                "locale": "es",
+                "template": "documented-authored-fb4e1f7b4d0ef3efa257",
+                "sourceNumbers": [
+                  90
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Hipertensión estadio 3 (DBHA 2020)",
+            "locale": "es",
+            "template": "documented-authored-f57f420b7b158021a746"
+          },
+          "note": {
+            "text": "Presión de pulso > 60 mmHg: en los adultos mayores, sugiere rigidez arterial.",
+            "locale": "es",
+            "template": "documented-authored-71fc0f3ab2e37ef8414c"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "115/75 mmHg: PA ótima",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Presión de pulso",
+                "locale": "es",
+                "template": "documented-authored-a6a72b861fdf94f805e2"
+              },
+              "value": {
+                "text": "40 mmHg",
+                "locale": "es",
+                "template": "documented-authored-fb4e1f7b4d0ef3efa257",
+                "sourceNumbers": [
+                  40
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "PA óptima (DBHA 2020)",
+            "locale": "es",
+            "template": "documented-authored-bb21819bc80183a08aa6"
+          },
+          "level": "low"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "140/90 mmHg: PAM 106,7 · PP 50 · HA estágio 1",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Pression pulsée",
+                "locale": "fr",
+                "template": "documented-authored-a6a72b861fdf94f805e2"
+              },
+              "value": {
+                "text": "50 mmHg",
+                "locale": "fr",
+                "template": "documented-authored-fb4e1f7b4d0ef3efa257",
+                "sourceNumbers": [
+                  50
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Hypertension de stade 1 (DBHA 2020)",
+            "locale": "fr",
+            "template": "documented-authored-da2a7dc4990ec55e63dc"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "185/95 mmHg: HA estágio 3",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Pression pulsée",
+                "locale": "fr",
+                "template": "documented-authored-a6a72b861fdf94f805e2"
+              },
+              "value": {
+                "text": "90 mmHg",
+                "locale": "fr",
+                "template": "documented-authored-fb4e1f7b4d0ef3efa257",
+                "sourceNumbers": [
+                  90
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Hypertension de stade 3 (DBHA 2020)",
+            "locale": "fr",
+            "template": "documented-authored-f57f420b7b158021a746"
+          },
+          "note": {
+            "text": "Pression pulsée > 60 mmHg : chez les personnes âgées, suggère une rigidité artérielle.",
+            "locale": "fr",
+            "template": "documented-authored-71fc0f3ab2e37ef8414c"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "115/75 mmHg: PA ótima",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Pression pulsée",
+                "locale": "fr",
+                "template": "documented-authored-a6a72b861fdf94f805e2"
+              },
+              "value": {
+                "text": "40 mmHg",
+                "locale": "fr",
+                "template": "documented-authored-fb4e1f7b4d0ef3efa257",
+                "sourceNumbers": [
+                  40
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "PA optimale (DBHA 2020)",
+            "locale": "fr",
+            "template": "documented-authored-bb21819bc80183a08aa6"
+          },
+          "level": "low"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "140/90 mmHg: PAM 106,7 · PP 50 · HA estágio 1",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Pulsdruck",
+                "locale": "de",
+                "template": "documented-authored-a6a72b861fdf94f805e2"
+              },
+              "value": {
+                "text": "50 mmHg",
+                "locale": "de",
+                "template": "documented-authored-fb4e1f7b4d0ef3efa257",
+                "sourceNumbers": [
+                  50
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Hypertonie Stadium 1 (DBHA 2020)",
+            "locale": "de",
+            "template": "documented-authored-da2a7dc4990ec55e63dc"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "185/95 mmHg: HA estágio 3",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Pulsdruck",
+                "locale": "de",
+                "template": "documented-authored-a6a72b861fdf94f805e2"
+              },
+              "value": {
+                "text": "90 mmHg",
+                "locale": "de",
+                "template": "documented-authored-fb4e1f7b4d0ef3efa257",
+                "sourceNumbers": [
+                  90
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Hypertonie Stadium 3 (DBHA 2020)",
+            "locale": "de",
+            "template": "documented-authored-f57f420b7b158021a746"
+          },
+          "note": {
+            "text": "Pulsdruck > 60 mmHg: bei älteren Erwachsenen deutet dies auf arterielle Steifigkeit hin.",
+            "locale": "de",
+            "template": "documented-authored-71fc0f3ab2e37ef8414c"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "115/75 mmHg: PA ótima",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Pulsdruck",
+                "locale": "de",
+                "template": "documented-authored-a6a72b861fdf94f805e2"
+              },
+              "value": {
+                "text": "40 mmHg",
+                "locale": "de",
+                "template": "documented-authored-fb4e1f7b4d0ef3efa257",
+                "sourceNumbers": [
+                  40
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Optimale RR (DBHA 2020)",
+            "locale": "de",
+            "template": "documented-authored-bb21819bc80183a08aa6"
+          },
+          "level": "low"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "140/90 mmHg: PAM 106,7 · PP 50 · HA estágio 1",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Pressione differenziale",
+                "locale": "it",
+                "template": "documented-authored-a6a72b861fdf94f805e2"
+              },
+              "value": {
+                "text": "50 mmHg",
+                "locale": "it",
+                "template": "documented-authored-fb4e1f7b4d0ef3efa257",
+                "sourceNumbers": [
+                  50
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Ipertensione stadio 1 (DBHA 2020)",
+            "locale": "it",
+            "template": "documented-authored-da2a7dc4990ec55e63dc"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "185/95 mmHg: HA estágio 3",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Pressione differenziale",
+                "locale": "it",
+                "template": "documented-authored-a6a72b861fdf94f805e2"
+              },
+              "value": {
+                "text": "90 mmHg",
+                "locale": "it",
+                "template": "documented-authored-fb4e1f7b4d0ef3efa257",
+                "sourceNumbers": [
+                  90
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Ipertensione stadio 3 (DBHA 2020)",
+            "locale": "it",
+            "template": "documented-authored-f57f420b7b158021a746"
+          },
+          "note": {
+            "text": "Pressione del polso > 60 mmHg: negli anziani suggerisce rigidità arteriosa.",
+            "locale": "it",
+            "template": "documented-authored-71fc0f3ab2e37ef8414c"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "115/75 mmHg: PA ótima",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Pressione differenziale",
+                "locale": "it",
+                "template": "documented-authored-a6a72b861fdf94f805e2"
+              },
+              "value": {
+                "text": "40 mmHg",
+                "locale": "it",
+                "template": "documented-authored-fb4e1f7b4d0ef3efa257",
+                "sourceNumbers": [
+                  40
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "PA ottimale (DBHA 2020)",
+            "locale": "it",
+            "template": "documented-authored-bb21819bc80183a08aa6"
+          },
+          "level": "low"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "140/90 mmHg: PAM 106,7 · PP 50 · HA estágio 1",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "ضغط النبض",
+                "locale": "ar",
+                "template": "documented-authored-a6a72b861fdf94f805e2"
+              },
+              "value": {
+                "text": "٥٠ mmHg",
+                "locale": "ar",
+                "template": "documented-authored-fb4e1f7b4d0ef3efa257",
+                "sourceNumbers": [
+                  50
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "ارتفاع ضغط الدم المرحلة 1 (DBHA 2020)",
+            "locale": "ar",
+            "template": "documented-authored-da2a7dc4990ec55e63dc"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "185/95 mmHg: HA estágio 3",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "ضغط النبض",
+                "locale": "ar",
+                "template": "documented-authored-a6a72b861fdf94f805e2"
+              },
+              "value": {
+                "text": "٩٠ mmHg",
+                "locale": "ar",
+                "template": "documented-authored-fb4e1f7b4d0ef3efa257",
+                "sourceNumbers": [
+                  90
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "ارتفاع ضغط الدم المرحلة 3 (DBHA 2020)",
+            "locale": "ar",
+            "template": "documented-authored-f57f420b7b158021a746"
+          },
+          "note": {
+            "text": "ضغط النبض > 60 mmHg: لدى كبار السن، يشير إلى تصلب شرياني.",
+            "locale": "ar",
+            "template": "documented-authored-71fc0f3ab2e37ef8414c"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "115/75 mmHg: PA ótima",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "ضغط النبض",
+                "locale": "ar",
+                "template": "documented-authored-a6a72b861fdf94f805e2"
+              },
+              "value": {
+                "text": "٤٠ mmHg",
+                "locale": "ar",
+                "template": "documented-authored-fb4e1f7b4d0ef3efa257",
+                "sourceNumbers": [
+                  40
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "ضغط الدم الأمثل (DBHA 2020)",
+            "locale": "ar",
+            "template": "documented-authored-bb21819bc80183a08aa6"
+          },
+          "level": "low"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "140/90 mmHg: PAM 106,7 · PP 50 · HA estágio 1",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "脉压",
+                "locale": "zh",
+                "template": "documented-authored-a6a72b861fdf94f805e2"
+              },
+              "value": {
+                "text": "50 mmHg",
+                "locale": "zh",
+                "template": "documented-authored-fb4e1f7b4d0ef3efa257",
+                "sourceNumbers": [
+                  50
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "1级高血压（DBHA 2020）",
+            "locale": "zh",
+            "template": "documented-authored-da2a7dc4990ec55e63dc"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "185/95 mmHg: HA estágio 3",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "脉压",
+                "locale": "zh",
+                "template": "documented-authored-a6a72b861fdf94f805e2"
+              },
+              "value": {
+                "text": "90 mmHg",
+                "locale": "zh",
+                "template": "documented-authored-fb4e1f7b4d0ef3efa257",
+                "sourceNumbers": [
+                  90
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "3级高血压（DBHA 2020）",
+            "locale": "zh",
+            "template": "documented-authored-f57f420b7b158021a746"
+          },
+          "note": {
+            "text": "脉压 > 60 mmHg：在老年人中，提示动脉僵硬。",
+            "locale": "zh",
+            "template": "documented-authored-71fc0f3ab2e37ef8414c"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "115/75 mmHg: PA ótima",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "脉压",
+                "locale": "zh",
+                "template": "documented-authored-a6a72b861fdf94f805e2"
+              },
+              "value": {
+                "text": "40 mmHg",
+                "locale": "zh",
+                "template": "documented-authored-fb4e1f7b4d0ef3efa257",
+                "sourceNumbers": [
+                  40
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "最佳血压（DBHA 2020）",
+            "locale": "zh",
+            "template": "documented-authored-bb21819bc80183a08aa6"
+          },
+          "level": "low"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "140/90 mmHg: PAM 106,7 · PP 50 · HA estágio 1",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "脈圧",
+                "locale": "ja",
+                "template": "documented-authored-a6a72b861fdf94f805e2"
+              },
+              "value": {
+                "text": "50 mmHg",
+                "locale": "ja",
+                "template": "documented-authored-fb4e1f7b4d0ef3efa257",
+                "sourceNumbers": [
+                  50
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "ステージ 1 高血圧（DBHA 2020）",
+            "locale": "ja",
+            "template": "documented-authored-da2a7dc4990ec55e63dc"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "185/95 mmHg: HA estágio 3",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "脈圧",
+                "locale": "ja",
+                "template": "documented-authored-a6a72b861fdf94f805e2"
+              },
+              "value": {
+                "text": "90 mmHg",
+                "locale": "ja",
+                "template": "documented-authored-fb4e1f7b4d0ef3efa257",
+                "sourceNumbers": [
+                  90
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "ステージ 3 高血圧（DBHA 2020）",
+            "locale": "ja",
+            "template": "documented-authored-f57f420b7b158021a746"
+          },
+          "note": {
+            "text": "脈圧 > 60 mmHg: 高齢者では、動脈の硬化を示唆する。",
+            "locale": "ja",
+            "template": "documented-authored-71fc0f3ab2e37ef8414c"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "115/75 mmHg: PA ótima",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "脈圧",
+                "locale": "ja",
+                "template": "documented-authored-a6a72b861fdf94f805e2"
+              },
+              "value": {
+                "text": "40 mmHg",
+                "locale": "ja",
+                "template": "documented-authored-fb4e1f7b4d0ef3efa257",
+                "sourceNumbers": [
+                  40
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "最適血圧（DBHA 2020）",
+            "locale": "ja",
+            "template": "documented-authored-bb21819bc80183a08aa6"
+          },
+          "level": "low"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "140/90 mmHg: PAM 106,7 · PP 50 · HA estágio 1",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "नाड़ी दाब",
+                "locale": "hi",
+                "template": "documented-authored-a6a72b861fdf94f805e2"
+              },
+              "value": {
+                "text": "50 mmHg",
+                "locale": "hi",
+                "template": "documented-authored-fb4e1f7b4d0ef3efa257",
+                "sourceNumbers": [
+                  50
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "स्टेज 1 उच्च रक्तचाप (DBHA 2020)",
+            "locale": "hi",
+            "template": "documented-authored-da2a7dc4990ec55e63dc"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "185/95 mmHg: HA estágio 3",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "नाड़ी दाब",
+                "locale": "hi",
+                "template": "documented-authored-a6a72b861fdf94f805e2"
+              },
+              "value": {
+                "text": "90 mmHg",
+                "locale": "hi",
+                "template": "documented-authored-fb4e1f7b4d0ef3efa257",
+                "sourceNumbers": [
+                  90
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "स्टेज 3 उच्च रक्तचाप (DBHA 2020)",
+            "locale": "hi",
+            "template": "documented-authored-f57f420b7b158021a746"
+          },
+          "note": {
+            "text": "नाड़ी दाब > 60 mmHg: वृद्धों में, यह धमनियों की कठोरता का संकेत देता है。",
+            "locale": "hi",
+            "template": "documented-authored-71fc0f3ab2e37ef8414c"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "115/75 mmHg: PA ótima",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "नाड़ी दाब",
+                "locale": "hi",
+                "template": "documented-authored-a6a72b861fdf94f805e2"
+              },
+              "value": {
+                "text": "40 mmHg",
+                "locale": "hi",
+                "template": "documented-authored-fb4e1f7b4d0ef3efa257",
+                "sourceNumbers": [
+                  40
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "इष्टतम BP (DBHA 2020)",
+            "locale": "hi",
+            "template": "documented-authored-bb21819bc80183a08aa6"
+          },
+          "level": "low"
+        }
+      }
+    ]
+  }
+}
